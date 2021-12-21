@@ -23,7 +23,9 @@ function writePassword() {
 //Click button to generate password
 
 function generatePassword() {
-  prompt()
+  let passwordLength = prompt("How many characters would you like for your password to have?");
+    if ((passwordLength >= 8) && (passwordLength <= 128));
+    console.log(passwordLength)
 }
 
 generatePassword();
