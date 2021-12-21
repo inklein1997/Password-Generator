@@ -1,5 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var passwordLength;
+const uppercase = ["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+// console.log(uppercase.length)
+const lowercase = uppercase.map(name => name.toLowerCase());
+// console.log(lowercase)
+const numbers = [0,1,2,3,4,5,6,7,8,9,0]
+const special = ["!", "'", '"', "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".","/",";",":","<",">","=","?","@","[","]","\ ","{","}", "|","~","`"]
+
 
 // Write password to the #password input
 function writePassword() {
@@ -13,6 +21,12 @@ function writePassword() {
 //PSEUDO CODE
 
 //Click button to generate password
+
+function generatePassword() {
+  prompt()
+}
+
+generatePassword();
 
 //generatePassword function will begin.
 
@@ -39,6 +53,16 @@ function writePassword() {
 
 //use to loop to pull a single character from array password "i" or "passwordLength" times.
 //ensure that every pull is random using math.random().
+
+
+
+
+
+
+
+
+
+
 
 
 // Add event listener to generate button
