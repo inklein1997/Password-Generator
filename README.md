@@ -15,12 +15,12 @@ To create an application, utilizing JavaScript fundamentals, that enables the us
 
 ## Links
 ---
-- ### ![URL to Deployed Application]()
-- ### ![URL to Github Repository]()
+- ### [URL to Deployed Application](https://inklein1997.github.io/Password-Generator/)
+- ### [URL to Github Repository](https://github.com/inklein1997/Password-Generator)
 
 ## Screenshot of Webpage
 ---
-![Screenshot of Webpage]("./assets/images/Webpage.jpg")
+![Screenshot of Webpage](./assets/images/Webpage.jpg)
 
 ## User Instructions
 ---
