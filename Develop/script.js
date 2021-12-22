@@ -1,12 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var passwordLength;
-const uppercase = ["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-// console.log(uppercase.length)
-const lowercase = uppercase.map(name => name.toLowerCase());
-// console.log(lowercase)
+const uppercase = ["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];  // console.log(uppercase.length)
+const lowercase = uppercase.map(name => name.toLowerCase());  // console.log(lowercase)
 const numbers = [0,1,2,3,4,5,6,7,8,9,0]
 const special = ["!", "'", '"', "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".","/",";",":","<",">","=","?","@","[","]","\ ","{","}", "|","~","`"]
+let passwordArray = [];
+var upper 
 
 
 // Write password to the #password input
@@ -24,9 +24,21 @@ function writePassword() {
 
 function generatePassword() {
   let passwordLength = prompt("How many characters would you like for your password to have?");
-    if ((passwordLength >= 8) && (passwordLength <= 128));
-    console.log(passwordLength)
-}
+    if ((passwordLength >= 8) && (passwordLength <= 128)) {
+      console.log(passwordLength)
+    } else { 
+    let passwordLength = prompt("You must have at least 8 characters, but no more than 128 characters")
+      console.log(passwordLength)
+    }
+
+  let upper = confirm("Would you like for your password to have uppercase letters?");
+      if (upper === true) {
+        passwordArray = passwordArray.concat(uppercase)
+        console.log(passwordArray)
+      }
+      
+  
+  }
 
 generatePassword();
 
