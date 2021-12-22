@@ -39,38 +39,48 @@ function generatePassword() {
   let passwordArray = [];
   let randomPassword = "";
   
-  let upper = confirm("Would you like for your password to have uppercase letters?");
-      if (upper === true) {
-        passwordArray = passwordArray.concat(uppercase);
-        console.log(passwordArray);
-      } else {
-        console.log("The user does not want uppercase letters");
-      }
-      
-  let lower = confirm("Would you like for your password to have lowercase letters?");
-      if (lower === true) {
-        passwordArray = passwordArray.concat(lowercase);
-        console.log(passwordArray);
-      } else {
-        console.log("The user does not want lowercase letters");
-      }
+  function choices() {
+    let upper = confirm("Would you like for your password to have uppercase letters?");
+        if (upper === true) {
+          passwordArray = passwordArray.concat(uppercase);
+          console.log(passwordArray);
+        } else {
+          console.log("The user does not want uppercase letters");
+        }
+        
+    let lower = confirm("Would you like for your password to have lowercase letters?");
+        if (lower === true) {
+          passwordArray = passwordArray.concat(lowercase);
+          console.log(passwordArray);
+        } else {
+          console.log("The user does not want lowercase letters");
+        }
 
-  let numb = confirm("Would you like for your password to have numbers?");
-      if (numb === true) {
-        passwordArray = passwordArray.concat(numbers);
-        console.log(passwordArray);
-      } else {
-        console.log("The user does not want numbers");
-      }
+    let numb = confirm("Would you like for your password to have numbers?");
+        if (numb === true) {
+          passwordArray = passwordArray.concat(numbers);
+          console.log(passwordArray);
+        } else {
+          console.log("The user does not want numbers");
+        }
 
-  let spec = confirm("Would you like for your password to have special characters?");
-      if (spec === true) {
-        passwordArray = passwordArray.concat(special);
-        console.log(passwordArray);
-      } else {
-        console.log("The user does not want special characters");
-      }
-  
+    let spec = confirm("Would you like for your password to have special characters?");
+        if (spec === true) {
+          passwordArray = passwordArray.concat(special);
+          console.log(passwordArray);
+        } else {
+          console.log("The user does not want special characters");
+        }
+    
+    if ((upper != true) && (lower != true) && (numb != true) && (spec != true)) {
+      alert("You must choose at least one type of character")
+      console.log("The user needs to choose at least one type of character");
+      choices();
+    }
+  }
+
+  choices();
+
   for(var i=0; i <= Length; i++) {
       let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
       console.log("password array pull is " + random);
