@@ -41,7 +41,7 @@ To create an application, utilizing JavaScript fundamentals, that enables the us
 
 ## Acknowledgements
 
-The following items were provided by University of Texas at Austin Bootcamp curriculum
+The following items were provided by University of Texas at Austin Bootcamp curriculum.
 - [style.css](./assets/css/style.css)
 - [index.html](./index.html)
 - specific sections in [script.js](./assets/js/script.js) including;
