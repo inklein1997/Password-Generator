@@ -11,13 +11,13 @@ let randomPassword = "";
 
 
 // Write password to the #password input
-function writePassword() {
-  var randomPassword = generatePassword();
-  var randomPassword = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
   
-  randomPassword.value = randomPassword;
+//   passwordText.value = password;
 
-}
+// }
 
 //PSEUDO CODE
 
@@ -63,8 +63,8 @@ function generatePassword() {
     }
   }
 
-// generatePassword();
-writePassword();
+generatePassword();
+// writePassword();
 //generatePassword function will begin.
 
 //Prompts will display using prompt().  Responses will be stored in object called userResponses
