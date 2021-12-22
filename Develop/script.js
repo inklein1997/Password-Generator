@@ -6,17 +6,15 @@ const lowercase = uppercase.map(name => name.toLowerCase());  // console.log(low
 const numbers = [0,1,2,3,4,5,6,7,8,9,0]
 const special = ["!", "'", '"', "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".","/",";",":","<",">","=","?","@","[","]","\ ","{","}", "|","~","`"]
 let passwordArray = [];
-var upper 
-var lower
-
+let randomPassword = "";
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
 //PSEUDO CODE
 
@@ -53,6 +51,13 @@ function generatePassword() {
         passwordArray = passwordArray.concat(special);
         console.log(passwordArray);
       }
+  
+  for(var i=0; i <= passwordLength; i++) {
+      let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
+      console.log(random);
+      randomPassword = randomPassword.concat(random);
+      console.log(randomPassword);
+    }
   }
 
 generatePassword();
@@ -95,8 +100,4 @@ generatePassword();
 
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-
-
+// generateBtn.addEventListener("click", writePassword);
