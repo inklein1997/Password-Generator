@@ -1,7 +1,7 @@
 # Random Password Generator
 
 ## Table of Contents
----
+
 - [Project Goal](##Project-Goal)
 - [Links](##Links)
 - [Screenshot of Webpage](##Screenshot-of-Webpage)
@@ -9,21 +9,21 @@
 - [Acknowledgements](##Acknowledgements)
 
 ## Project Goal
----
+
 To create an application, utilizing JavaScript fundamentals, that enables the user to generate a random password based off specific parameters they select (i.e. password length and character type).  This application will run in Google Chrome and has an user-interface that is responsive to multiple screen-sizes.   
 
 
 ## Links
----
+
 - ### [URL to Deployed Application](https://inklein1997.github.io/Password-Generator/)
 - ### [URL to Github Repository](https://github.com/inklein1997/Password-Generator)
 
 ## Screenshot of Webpage
----
+
 ![Screenshot of Webpage](./assets/images/Webpage.jpg)
 
 ## User Instructions
----
+
 1. Click red button labeled **"Generate Password"**. <br>
 ![Generate Password Button Step](./assets/images/step1.jpg)
 2. **Type** desired password length and press **"OK"**. <br>
