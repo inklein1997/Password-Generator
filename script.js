@@ -5,8 +5,8 @@ const uppercase = ["A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 const lowercase = uppercase.map(name => name.toLowerCase());  // console.log(lowercase)
 const numbers = [0,1,2,3,4,5,6,7,8,9,0]
 const special = ["!", "'", '"', "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".","/",";",":","<",">","=","?","@","[","]","\ ","{","}", "|","~","`"]
-let passwordArray = [];
-let randomPassword = "";
+// let passwordArray = [];
+// let randomPassword = "";
 
 
 generateBtn.addEventListener("click", writePassword);
@@ -19,20 +19,26 @@ function writePassword() {
 
 }
 
-//PSEUDO CODE
-
-//Click button to generate password
-
-function generatePassword() {
+function specifyLength() {
   let passwordLength = prompt("How many characters would you like for your password to have?");
     if ((passwordLength >= 8) && (passwordLength <= 128)) {
       console.log("This is the users specified " + passwordLength);
     } else {
       alert("You must have at least 8 characters, but no more than 128 characters");
-      generatePassword();
-      console.log("This is the users specified " + passwordLength);
+      specifyLength();
     }
+    return passwordLength
+  }
 
+//PSEUDO CODE
+
+//Click button to generate password
+
+function generatePassword() {
+  var Length = specifyLength();
+  let passwordArray = [];
+  let randomPassword = "";
+  
   let upper = confirm("Would you like for your password to have uppercase letters?");
       if (upper === true) {
         passwordArray = passwordArray.concat(uppercase);
@@ -65,7 +71,7 @@ function generatePassword() {
         console.log("The user does not want special characters");
       }
   
-  for(var i=0; i <= passwordLength; i++) {
+  for(var i=0; i <= Length; i++) {
       let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
       console.log("password array pull is " + random);
       randomPassword = randomPassword.concat(random);
