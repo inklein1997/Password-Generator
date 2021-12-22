@@ -7,14 +7,17 @@ const numbers = [0,1,2,3,4,5,6,7,8,9,0]
 const special = ["!", "'", '"', "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".","/",";",":","<",">","=","?","@","[","]","\ ","{","}", "|","~","`"]
 let passwordArray = [];
 let randomPassword = "";
+
+
+
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var randomPassword = generatePassword();
+  var randomPassword = document.querySelector("#password");
+  
+  randomPassword.value = randomPassword;
 
-//   passwordText.value = password;
-
-// }
+}
 
 //PSEUDO CODE
 
@@ -55,13 +58,13 @@ function generatePassword() {
   for(var i=0; i <= passwordLength; i++) {
       let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
       console.log(random);
-      randomPassword = randomPassword.concat(random);
-      console.log(randomPassword);
+      let randomPassword = randomPassword.concat(random);
+      console.log(randomPassword);  //randomPassword is the password I want to show on the html!
     }
   }
 
-generatePassword();
-
+// generatePassword();
+writePassword();
 //generatePassword function will begin.
 
 //Prompts will display using prompt().  Responses will be stored in object called userResponses
@@ -87,17 +90,6 @@ generatePassword();
 
 //use to loop to pull a single character from array password "i" or "passwordLength" times.
 //ensure that every pull is random using math.random().
-
-
-
-
-
-
-
-
-
-
-
 
 // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
