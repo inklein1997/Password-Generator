@@ -9,15 +9,15 @@ let passwordArray = [];
 let randomPassword = "";
 
 
-
+generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
   
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
 //PSEUDO CODE
 
@@ -57,14 +57,14 @@ function generatePassword() {
   
   for(var i=0; i <= passwordLength; i++) {
       let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
-      console.log(random);
-      let randomPassword = randomPassword.concat(random);
-      console.log(randomPassword);  //randomPassword is the password I want to show on the html!
+      console.log("pass array pull is " + random);
+      randomPassword = randomPassword.concat(random);
+      console.log("random password is " + randomPassword);  //randomPassword is the password I want to show on the html!
     }
+  return randomPassword
   }
 
-generatePassword();
-// writePassword();
+  
 //generatePassword function will begin.
 
 //Prompts will display using prompt().  Responses will be stored in object called userResponses
@@ -92,4 +92,3 @@ generatePassword();
 //ensure that every pull is random using math.random().
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
