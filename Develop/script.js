@@ -25,25 +25,29 @@ function writePassword() {
 function generatePassword() {
   let passwordLength = prompt("How many characters would you like for your password to have?");
     if ((passwordLength >= 8) && (passwordLength <= 128)) {
-      console.log(passwordLength)
+      console.log(passwordLength);
     } else { 
     let passwordLength = prompt("You must have at least 8 characters, but no more than 128 characters")
-      console.log(passwordLength)
+      console.log(passwordLength);
     }
 
   let upper = confirm("Would you like for your password to have uppercase letters?");
       if (upper === true) {
-        passwordArray = passwordArray.concat(uppercase)
-        console.log(passwordArray)
+        passwordArray = passwordArray.concat(uppercase);
+        console.log(passwordArray);
       }
       
   let lower = confirm("Would you like for your password to have lowercase letters?");
       if (upper === true) {
-        passwordArray = passwordArray.concat(lowercase)
-        console.log(passwordArray)
+        passwordArray = passwordArray.concat(lowercase);
+        console.log(passwordArray);
       }
 
-      
+  let numb = confirm("Would you like for your password to have numbers?")    ;
+      if (numb === true) {
+        passwordArray = passwordArray.concat(numbers);
+        console.log(passwordArray);
+      }
   }
 
 generatePassword();
