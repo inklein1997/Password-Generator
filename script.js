@@ -26,40 +26,50 @@ function writePassword() {
 function generatePassword() {
   let passwordLength = prompt("How many characters would you like for your password to have?");
     if ((passwordLength >= 8) && (passwordLength <= 128)) {
-      console.log(passwordLength);
-    } else { 
-    let passwordLength = prompt("You must have at least 8 characters, but no more than 128 characters")
-      console.log(passwordLength);
+      console.log("This is the users specified " + passwordLength);
+    } else {
+      alert("You must have at least 8 characters, but no more than 128 characters");
+      generatePassword();
+      console.log("This is the users specified " + passwordLength);
     }
 
   let upper = confirm("Would you like for your password to have uppercase letters?");
       if (upper === true) {
         passwordArray = passwordArray.concat(uppercase);
         console.log(passwordArray);
+      } else {
+        console.log("The user does not want uppercase letters");
       }
       
   let lower = confirm("Would you like for your password to have lowercase letters?");
-      if (upper === true) {
+      if (lower === true) {
         passwordArray = passwordArray.concat(lowercase);
         console.log(passwordArray);
+      } else {
+        console.log("The user does not want lowercase letters");
       }
 
   let numb = confirm("Would you like for your password to have numbers?");
       if (numb === true) {
         passwordArray = passwordArray.concat(numbers);
         console.log(passwordArray);
+      } else {
+        console.log("The user does not want numbers");
       }
+
   let spec = confirm("Would you like for your password to have special characters?");
       if (spec === true) {
         passwordArray = passwordArray.concat(special);
         console.log(passwordArray);
+      } else {
+        console.log("The user does not want special characters");
       }
   
   for(var i=0; i <= passwordLength; i++) {
       let random = passwordArray[Math.floor(Math.random()*passwordArray.length)];
-      console.log("pass array pull is " + random);
+      console.log("password array pull is " + random);
       randomPassword = randomPassword.concat(random);
-      console.log("random password is " + randomPassword);  //randomPassword is the password I want to show on the html!
+      console.log("random password is " + randomPassword);
     }
   return randomPassword
   }
