@@ -7,7 +7,7 @@
   // Prompt #3 = Would you like for your password to have lowercase letters? / if yes, concat with array password = []
   // Prompt #4 = Would you like for your password to have numbers / if yes, concat with array password = []
   // Prompt #5 = Would you like for your password to have special characters? / if yes, concat with array password = []
-  // use to loop to pull a single character from array password "i" or "passwordLength" times. / ensure that every pull is random using math.random().
+  // use loop to pull a single character from array password "i" or "passwordLength" times. / ensure that every pull is random using math.random().
   // Add event listener to generate button
 
 // Assignment Code
@@ -26,11 +26,11 @@ function writePassword() {
   
   passwordText.value = password;
 }
-
+// Prompt that defines the length of the password string based off 
 function specifyLength() {
   let passwordLength = prompt("How many characters would you like for your password to have?");
     if ((passwordLength >= 8) && (passwordLength <= 128)) {
-      console.log("This is the users specified " + passwordLength);
+      console.log("This is the users specified " + passwordLength + " characters.");
     } else {
       alert("You must have at least 8 characters, but no more than 128 characters");
       specifyLength();
