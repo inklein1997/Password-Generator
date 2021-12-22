@@ -43,9 +43,14 @@ function generatePassword() {
         console.log(passwordArray);
       }
 
-  let numb = confirm("Would you like for your password to have numbers?")    ;
+  let numb = confirm("Would you like for your password to have numbers?");
       if (numb === true) {
         passwordArray = passwordArray.concat(numbers);
+        console.log(passwordArray);
+      }
+  let spec = confirm("Would you like for your password to have special characters?");
+      if (spec === true) {
+        passwordArray = passwordArray.concat(special);
         console.log(passwordArray);
       }
   }
