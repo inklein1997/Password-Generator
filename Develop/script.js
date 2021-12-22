@@ -7,7 +7,7 @@ const numbers = [0,1,2,3,4,5,6,7,8,9,0]
 const special = ["!", "'", '"', "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".","/",";",":","<",">","=","?","@","[","]","\ ","{","}", "|","~","`"]
 let passwordArray = [];
 var upper 
-
+var lower
 
 // Write password to the #password input
 function writePassword() {
@@ -37,7 +37,13 @@ function generatePassword() {
         console.log(passwordArray)
       }
       
-  
+  let lower = confirm("Would you like for your password to have lowercase letters?");
+      if (upper === true) {
+        passwordArray = passwordArray.concat(lowercase)
+        console.log(passwordArray)
+      }
+
+      
   }
 
 generatePassword();
